@@ -4,7 +4,7 @@ RUN apt-get install -y nginx
 WORKDIR /app
 COPY . /app/
 EXPOSE 80
-RUN npm install -g cnpm --registry=https://http://registry.npm.taobao.org \
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && cnpm install \
     && cnpm run build \
     && cp -r dist/* /var/www/html \
